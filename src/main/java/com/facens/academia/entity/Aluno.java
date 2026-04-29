@@ -23,17 +23,13 @@ public class Aluno {
     @JoinColumn(name = "plano_id")
     private Plano plano;
 
-    // Construtor vazio (obrigatório)
     public Aluno() {
     }
 
-    // Preencher data automaticamente antes de salvar
     @PrePersist
     public void prePersist() {
         this.dataCadastro = LocalDateTime.now();
     }
-
-    // GETTERS E SETTERS
 
     public Long getId() {
         return id;

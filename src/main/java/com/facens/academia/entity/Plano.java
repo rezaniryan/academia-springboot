@@ -19,14 +19,11 @@ public class Plano {
     private Boolean ativo;
 
     @OneToMany(mappedBy = "plano")
-    @JsonIgnore // evita loop infinito no JSON
+    @JsonIgnore 
     private List<Aluno> alunos;
 
-    // Construtor vazio
     public Plano() {
     }
-
-    // GETTERS E SETTERS
 
     public Long getId() {
         return id;
